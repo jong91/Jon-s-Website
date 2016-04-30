@@ -1,52 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>JonsRoom</title>
+	<title>Home</title>
+	<link rel="icon" href="file:///C:/Users/jon/Desktop/Jon-s-Website/images/smalllogo.png">
+
 	<link rel="stylesheet" media="screen and (max-width:800px)" href="css/main_mobile.css">
 	<link rel="stylesheet" media="screen and (min-width:800px)" href="css/main.css">
-</head>
 
+</head>
 <body>
 <!-- top menu for full site -->
 	<div class="top-menu">
 		<ul>
 			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/Index.html">
 				<li>
-					<img src="images/homeicon.png" />
+					<img src="images/smalllogo.png" />
 				</li>
 			</a>
-			<a href="#">
-				<li">
-					
-				</li>
-			</a>
-			<a href="#">
+			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/about.html">
 				<li>
-				
+					<p>About Me</p>
 				</li>
 			</a>
-			<a href="#">
+			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/gallery.html">
 				<li>
-
+					<p>Gallery</p>
 				</li>
 			</a>
-			<a href="#">
+			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/contact.html">
 				<li>
+					<p>Contact</p>
 				</li>
 			</a>
-		</ul>
+			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/search.html#">
+				<li>
+					<p>Search</p>
+				</li>
+			</a>
+		</ul>	
 	</div>
 
+
+<!-- slide show of me -->
+	<div class="homeslideshow" style="max-width:1200px">
+		<img class="homeslides" src="images/chef.jpg" style="width:100%">
+		<img class="homeslides" src="images/coder.jpg" style="width:100%">
+		<img class="homeslides" src="images/baller.jpg" style="width:100%">
+		<img class="homeslides" src="images/gamer.jpg" style="width:100%">
+		
+		<div class="tnailrow">
+			<div class="tnailcol">
+				<img class="tnail"
+					src="images/chef.jpg" style="width:100%" onclick="currentDiv(1)">
+			</div>
+			<div class="tnailcol">
+				<img class="tnail"
+					src="images/coder.jpg" style="width:100%" onclick="currentDiv(2)">
+			</div>
+			<div class="tnailcol">
+				<img class="tnail"
+					src="images/baller.jpg" style="width:100%" onclick="currentDiv(3)">
+			</div>
+			<div class="tnailcol">
+				<img class="tnail"
+					src="images/gamer.jpg" style="width:100%" onclick="currentDiv(4)">
+			</div>
+		</div>
+	</div>
+	
+<!-- script for slideshow -->
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n){
+		showDivs(slideIndex += n);
+	}
+	
+	function currentDivs(n){
+		showDivs (slideIndex = n);
+	}
+	
+	function showDivs(n){
+		var i;
+		var x = document.getElementsByClassName("homeslides");
+		var dots = document.getElementByClassName("tnail");
+		if (n > x.length) {slideIndex = 1} //for scrolling through end
+		if (n < 1) {slideIndex = x.length} ;//for scrolling backwards through beginning
+		//clear the display
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		//border around selected thumbnail
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" border-black");
+		}
+		x[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " border-black";
+	}
+</script>
+
+	
 <!-- bottom menu for mobile -->
 	<div class="bottom-menu">
 		<ul>
 			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/about.html">
-				<li>
+				<li class="selected">
 					<img src="images/abouticon.png" />
 				</li>
 			</a>
 			<a href="file:///C:/Users/jon/Desktop/Jon-s-Website/Index.html">
-				<li class="selected">
+				<li>
 					<img src="images/homeicon.png" />
 				</li>
 			</a>
@@ -67,7 +131,7 @@
 			</a>
 		</ul>
 	</div>
-
 	</body>
+	
 
 </html>

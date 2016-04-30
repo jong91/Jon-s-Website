@@ -15,6 +15,7 @@ img{
 /* hide top menu for mobile site*/
 .top-menu{
 	visibility: hidden;
+	display:none;
 }
 
 /* bottom menu */

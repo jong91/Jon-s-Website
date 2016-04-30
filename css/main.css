@@ -11,8 +11,82 @@ body{
 img{
 	max-width:100%;
 }
+/* top menu */
+.top-menu{
+	font-size: 1em;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+}
+
+.top-menu ul a li{
+	text-decoration: none;
+	text-align: center;
+	float: left;
+	list-style: none; 
+	height: 100%;
+	width: 16.8%;
+	padding-left: 1.6%;
+	padding-right: 1.6%;
+	opacity: 0.8;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+}
+
+.top-menu ul a li img{
+	max-height: 4.5em;
+	padding: .15em;
+}
+
+.top-menu ul a li p {
+	color: white;
+	padding-top: 1em;
+	bottom: 0;
+	font-size: 1.5em;
+}
+
+.top-menu ul a li:hover {
+	opacity: .5;
+}
+
+.top-menu ul a li.selected {
+	border-bottom: 2px solid red;
+}
+
+/* slideshow */
+.homeslideshow{
+	max-width:980px;
+	margin:auto;
+}
+
+.homeslides{
+	display:none;
+}
+
+.tnailrow{
+	padding:16px 8px 16px;
+}
+
+.tnailcol{
+	width: 24.99999%;
+}
+
+.tnail{
+	
+}
+
+.tnail:hover{
+	border: 2px solid red;
+	opacity: .8;
+}
+
+.border-black{
+	border-color: black;
+}
 
 /* hide bottom menu for full site*/
 .bottom-menu{
+	display:none;
 	visibility: hidden;
 }

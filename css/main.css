@@ -13,11 +13,11 @@ img{
 }
 /* top menu */
 .top-menu{
-	font-size: 1em;
+	font-size: .7em;
 	top: 0;
-	position: fixed;
 	width: 100%;
 	background-color: black;
+	overflow:auto;
 }
 
 .top-menu ul a li{
@@ -30,7 +30,6 @@ img{
 	padding-left: 1.6%;
 	padding-right: 1.6%;
 	opacity: 0.8;
-	border-bottom: 2px solid black;
 	border-top: 2px solid black;
 }
 
@@ -44,6 +43,7 @@ img{
 	padding-top: 1em;
 	bottom: 0;
 	font-size: 1.5em;
+	border-bottom: 2px solid black;
 }
 
 .top-menu ul a li:hover {
@@ -54,31 +54,57 @@ img{
 	border-bottom: 2px solid red;
 }
 
+.title{
+	text-align: center;
+}
+
+.backdrop {
+	padding-top: 1em;
+	background-color: #303036;
+	margin:auto;
+}
+
+.backdrop !important{
+	opacity: 0.7;
+}
+
 /* slideshow */
 .homeslideshow{
-	max-width:980px;
+	opacity: 1;
 	margin:auto;
 }
 
 .homeslides{
-	display:none;
+	opacity: 1;
+	max-width:50%;
+	max-height:980px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2%;
+	display: none;
 }
 
 .tnailrow{
+	opacity: 1;
 	padding:16px 8px 16px;
+	text-align:center;
 }
 
 .tnailcol{
-	width: 24.99999%;
+	opacity: 1;
+	width: 13%;
+	padding: 1%;
+	display: inline-block;
 }
 
 .tnail{
-	
+	opacity: 1;	
 }
 
 .tnail:hover{
-	border: 2px solid red;
-	opacity: .8;
+	opacity: .95;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.4),
+				0 6px 20px 0 rgba(0,0,200,0.39);
 }
 
 .border-black{
@@ -89,4 +115,11 @@ img{
 .bottom-menu{
 	display:none;
 	visibility: hidden;
+}
+
+footer{
+	background-color: black;
+	color: silver;
+	width: 100%;
+	
 }

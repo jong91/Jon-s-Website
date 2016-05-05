@@ -39,15 +39,15 @@
 			</a>
 		</ul>	
 	</div>
-
-
+<br id="top"/>
+<div class="backdrop" style="width:90%">
+		<h1 class="title">Who is Jon Ong?</h1>
 <!-- slide show of me -->
 	<div class="homeslideshow" style="max-width:1200px">
 		<img class="homeslides" src="images/chef.jpg" style="width:100%">
 		<img class="homeslides" src="images/coder.jpg" style="width:100%">
 		<img class="homeslides" src="images/baller.jpg" style="width:100%">
 		<img class="homeslides" src="images/gamer.jpg" style="width:100%">
-		
 		<div class="tnailrow">
 			<div class="tnailcol">
 				<img class="tnail"
@@ -67,7 +67,21 @@
 			</div>
 		</div>
 	</div>
-	
+	<div class="description" style="max-width:1000px">
+		<p class="descriptions">
+			Master Chef
+		</p>
+		<p class="descriptions">
+			Brilliant Coder
+		</p>
+		<p class="descriptions">
+			Certified Ankle Breaker
+		</p>
+		<p class="descriptions">
+			World Class Gamer
+		</p>
+	</div>
+</div>
 <!-- script for slideshow -->
 <script>
 	var slideIndex = 1;
@@ -77,29 +91,37 @@
 		showDivs(slideIndex += n);
 	}
 	
-	function currentDivs(n){
-		showDivs (slideIndex = n);
+	function currentDiv(n){
+		showDivs(slideIndex = n);
 	}
 	
 	function showDivs(n){
 		var i;
 		var x = document.getElementsByClassName("homeslides");
-		var dots = document.getElementByClassName("tnail");
+		var y = document.getElementsByClassName("description");
+		var dots = document.getElementsByClassName("tnail");
 		if (n > x.length) {slideIndex = 1} //for scrolling through end
 		if (n < 1) {slideIndex = x.length} ;//for scrolling backwards through beginning
 		//clear the display
 		for (i = 0; i < x.length; i++) {
 			x[i].style.display = "none";
+
 		}
 		//border around selected thumbnail
 		for (i = 0; i < dots.length; i++) {
 			dots[i].className = dots[i].className.replace(" border-black");
 		}
-		x[slideIndex-1].style.display = "block";
+		x[slideIndex-1].style.display = "inline";
+		y[slideIndex-1].style.display = "inline";
 		dots[slideIndex-1].className += " border-black";
 	}
 </script>
 
+<footer>
+	<a href="#top">
+		what's up?
+	</a>
+</footer>
 	
 <!-- bottom menu for mobile -->
 	<div class="bottom-menu">
